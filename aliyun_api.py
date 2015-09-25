@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#coding: utf-8
+
 import sys,os
 import urllib,urllib2
 import base64
@@ -11,9 +14,9 @@ import json
 access_key_id = '';
 access_key_secret = '';
 server_address = 'https://ecs.aliyuncs.com'
-user_params = {'Action': 'DescribeInstanceMonitorData', 'InstanceId': 'i-280xh6jqg', 'StartTime': '2015-07-27T09:00:00Z', 'EndTime': '2015-07-27T10:00:00Z', 'Period': '600'}
-#user_params = {'Action': 'DescribeInstanceTypes'}
 
+#定义参数
+user_params = {'Action': 'DescribeInstanceMonitorData', 'InstanceId': 'i-280xh6jqg', 'StartTime': '2015-07-27T09:00:00Z', 'EndTime': '2015-07-27T10:00:00Z', 'Period': '600'}
 
 def percent_encode(str):
     res = urllib.quote(str.decode(sys.stdin.encoding).encode('utf8'), '')
